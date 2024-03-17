@@ -18,9 +18,9 @@ router.post("/",async(request,response)=>{
             return response.status(400).json({message:"you are not the owner"})
         }
      
-        if(owner.email !== originalOwner.email){
-            return response.status(400).json({message:"you are not the owner"})
-        }
+        // if(owner.email !== originalOwner.email){
+        //     return response.status(400).json({message:"you are not the owner"})
+        // }
        
         const validatePassword = await bcrypt.compare(
             request.body.password,
